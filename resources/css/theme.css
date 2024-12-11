@@ -282,12 +282,14 @@ input[type="search"] {
 
 [dir] .wt-facts-table tr > * {
     border: none;
-    border-bottom: var(--bs-border-width) var(--bs-border-style) var(--bs-border-color);
+    border: var(--bs-border-width) var(--bs-border-style) var(--bs-border-color);
     color: var(--bs-body-color);
 }
 
 [dir] .wt-facts-table th {
     background-color: var(--bgColor-muted);
+    border-radius: 4px;
+    text-align: center;
 }
 
 [dir] .wt-facts-table td {
@@ -318,7 +320,7 @@ input[type="search"] {
 
 table {
     border-color: var(--bs-border-color);
-    border-spacing: 0px;
+    border-spacing: 2px;
     border-collapse: collapse;
 }
 
