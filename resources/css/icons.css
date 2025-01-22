@@ -1,6 +1,6 @@
 /* Navigation icons */
 
-.nav-item > .nav-link::before {
+.nav-item > .nav-link::before, .wt-tabs-individual a.nav-link::before {
     font-family: "Font Awesome 6 Free";
     display: inline-block;
     margin-right: 5px;
@@ -75,6 +75,44 @@
 
 .nav-item.menu-story a::before {
     --content: "\f02d";
+}
+
+/* Individual tabs */
+
+.wt-tabs-individual a.nav-link[href="#personal_facts"]::before {
+    --content: "\f03a";
+}
+
+.wt-tabs-individual a.nav-link[href="#relatives"]::before {
+    --content: "\e537";
+}
+
+.wt-tabs-individual a.nav-link[href="#notes"]::before {
+    --content: "\f249";
+}
+
+.wt-tabs-individual a.nav-link[href="#places"]::before {
+    --content: "\f5a0";
+}
+
+.wt-tabs-individual a.nav-link[href="#sources_tab"]::before {
+    --content: "\e0bb";
+}
+
+.wt-tabs-individual a.nav-link[href="#media"]::before {
+    --content: "\f87c";
+}
+
+.wt-tabs-individual a.nav-link[href="#stories"]::before {
+    --content: "\f02d";
+}
+
+.wt-tabs-individual a.nav-link[href="#lightbox"]::before {
+    --content: "\f302";
+}
+
+.wt-tabs-individual a.nav-link[href="#tree"]::before {
+    --content: "\f0e8";
 }
 
 /* Individual/family icons */
