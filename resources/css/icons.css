@@ -79,18 +79,12 @@
 
 /* Individual tabs */
 
-.wt-tabs-individual a.nav-link[href="#personal_facts"]::before {
-    --content: "\f03a";
-}
-
+.wt-tabs-individual a.nav-link[href="#personal_facts"]::before,
 .wt-tabs-individual a.nav-link[href="#_vesta_personal_facts_"]::before {
     --content: "\f03a";
 }
 
-.wt-tabs-individual a.nav-link[href="#relatives"]::before {
-    --content: "\e537";
-}
-
+.wt-tabs-individual a.nav-link[href="#relatives"]::before,
 .wt-tabs-individual a.nav-link[href="#_vesta_relatives_"]::before {
     --content: "\e537";
 }
@@ -99,10 +93,7 @@
     --content: "\f249";
 }
 
-.wt-tabs-individual a.nav-link[href="#places"]::before {
-    --content: "\f5a0";
-}
-
+.wt-tabs-individual a.nav-link[href="#places"]::before,
 .wt-tabs-individual a.nav-link[href="#_vesta_places_and_pedigree_map_"]::before {
     --content: "\f5a0";
 }
@@ -123,10 +114,7 @@
     --content: "\f302";
 }
 
-.wt-tabs-individual a.nav-link[href="#tree"]::before {
-    --content: "\f0e8";
-}
-
+.wt-tabs-individual a.nav-link[href="#tree"]::before,
 .wt-tabs-individual a.nav-link[href="#_jc-fancy-treeview_"]::before {
     --content: "\f0e8";
 }
