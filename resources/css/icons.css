@@ -216,6 +216,10 @@
     content: '\f501';
 }
 
+.wt-fact-icon-MARC::before {
+    content: '\f5ac';
+}
+
 .wt-fact-icon-MARR::before,
 .wt-fact-icon-SLGS::before,
 .wt-fact-icon-ENGA::before,
