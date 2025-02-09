@@ -223,6 +223,7 @@ input[type="range"] {
 
 [dir] .dropdown-item.active, [dir] .dropdown-item:active {
     background-color: var(--control-transparent-bgColor-selected);
+    border-radius: var(--borderRadius-medium);
 }
 
 [dir] .dropdown-item:hover, [dir] .dropdown-item.active:hover, [dir] span.twitter-typeahead .tt-suggestion:focus, [dir] span.twitter-typeahead .tt-suggestion:hover {
