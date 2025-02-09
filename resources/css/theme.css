@@ -217,6 +217,8 @@ input[type="range"] {
 
 [dir] .dropdown-item {
     color: var(--control-fgColor-rest);
+    margin-left: var(--base-size-8);
+    margin-right: var(--base-size-8);
 }
 
 [dir] .dropdown-item.active, [dir] .dropdown-item:active {
@@ -226,6 +228,7 @@ input[type="range"] {
 [dir] .dropdown-item:hover, [dir] .dropdown-item.active:hover, [dir] span.twitter-typeahead .tt-suggestion:focus, [dir] span.twitter-typeahead .tt-suggestion:hover {
     background-color: var(--control-transparent-bgColor-hover);
     color: var(--control-fgColor-rest);
+    border-radius: var(--borderRadius-medium);
 }
 
 .dropdown-item.active:focus, .dropdown-item.active:hover, span.twitter-typeahead .active.tt-suggestion, span.twitter-typeahead .active.tt-suggestion:focus, span.twitter-typeahead .active.tt-suggestion:hover, span.twitter-typeahead .tt-suggestion.tt-cursor, span.twitter-typeahead .tt-suggestion.tt-cursor:focus, span.twitter-typeahead .tt-suggestion.tt-cursor:hover {
@@ -467,7 +470,6 @@ table {
 
 .dropdown-menu {
     font-size: var(--bs-body-font-size);
-    overflow-x: unset;
     --bs-dropdown-bg: var(--overlay-bgColor);
     --bs-dropdown-link-active-bg: var(--control-transparent-bgColor-selected);
     --bs-dropdown-border-color: var(--bs-border-color);
