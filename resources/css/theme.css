@@ -211,7 +211,7 @@ input[type="range"] {
     border-bottom-style: solid;
 }
 
-.nav-item {
+.wt-main-container .nav-item {
     padding-bottom: var(--base-size-8);
 }
 
