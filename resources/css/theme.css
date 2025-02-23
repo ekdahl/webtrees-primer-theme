@@ -276,6 +276,10 @@ input[type="range"] {
     color: var(--bs-body-color);
 }
 
+.wt-global {
+    overflow-y: auto;
+}
+
 [dir] .form-check-input {
     color: var(--fgColor-default);
     background-color: var(--bgColor-default);
