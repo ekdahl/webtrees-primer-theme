@@ -376,6 +376,24 @@ input[type="search"] {
     padding: var(--base-size-4);
 }
 
+/* Fact icon placement */
+[dir] .wt-facts-table th:has(.wt-fact-icon) {
+    position: relative;
+    padding-right: var(--base-size-48);
+}
+
+.wt-fact-icon {
+    position: absolute;
+    top: var(--base-size-8);
+    right: var(--base-size-8);
+    width: var(--base-size-32);
+    height: var(--base-size-32);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/* End of fact icon placement */
+
 [dir] .wt-chart-box .wt-chart-box-dropdown {
     background-color: var(--bs-dropdown-bg);
     border: var(--borderWidth-thin) solid var(--borderColor-muted);

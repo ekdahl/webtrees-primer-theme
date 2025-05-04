@@ -156,7 +156,7 @@
 .wt-fact-icon::before {
     font-family: 'Font Awesome 6 Free';
     font-style: normal;
-    font-size: var(--base-size-24);
+    font-size: var(--base-size-32);
     color: var(--fgColor-muted);
     display: block;
     content: none;
