@@ -236,7 +236,11 @@
 }
 
 .wt-fact-icon-PHON::before {
-    content: 'f095';
+    content: '\f095';
+}
+
+.wt-fact-icon-PROB::before {
+    content: '\f56c';
 }
 
 .wt-fact-icon-PROP::before,
