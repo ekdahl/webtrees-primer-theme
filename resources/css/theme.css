@@ -410,6 +410,10 @@ table {
     border-color: var(--bs-border-color);
     border-spacing: 0px;
     border-collapse: collapse;
+    --bs-accordion-btn-padding-x: var(--base-size-12);
+    --bs-accordion-btn-padding-y: var(--base-size-12);
+    --bs-accordion-body-padding-x: var(--base-size-12);
+    --bs-accordion-body-padding-y: var(--base-size-12);
 }
 
 [dir] .accordion-item {
