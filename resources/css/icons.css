@@ -194,10 +194,18 @@
     content: '\f274';
 }
 
+.wt-fact-icon-CREM::before {
+    content: '\e4f1';
+}
+
 .wt-fact-icon-CHR::before,
 .wt-fact-icon-BAPL::before,
 .wt-fact-icon-BAPM::before {
     content: '\f4ba';
+}
+
+.wt-fact-icon-DIV::before {
+    content: '\e068';
 }
 
 .wt-fact-icon-EMAIL::before {
