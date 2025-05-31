@@ -746,3 +746,7 @@ code {
 [dir=ltr] .wt-nested-edit-fields {
     border-left: var(--borderWidth-thicker) solid var(--borderColor-default);
 }
+
+[dir] .search_hit {
+    background-color: var(--bgColor-attention-muted);
+}
