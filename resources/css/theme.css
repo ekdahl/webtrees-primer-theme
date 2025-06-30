@@ -377,7 +377,8 @@ input[type="search"] {
 }
 
 /* Fact icon placement */
-[dir] .wt-facts-table th:has(.wt-fact-icon) {
+[dir] .wt-facts-table th:has(.wt-fact-icon),
+[dir] .accordion-item .accordion-body:has(.wt-fact-icon) {
     position: relative;
     padding-right: var(--base-size-48);
 }
