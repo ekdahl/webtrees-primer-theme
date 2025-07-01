@@ -251,7 +251,7 @@ input[type="range"] {
 }
 
 [dir] .accordion-button:focus {
-    box-shadow: 1px 1px #30363D !important;
+    box-shadow: 0 1px var(--bs-border-color) !important;
 }
 
 .wt-site-title {
