@@ -293,21 +293,8 @@
 .wt-block-content-user_welcome .icon-pedigree,
 .wt-block-content-user_welcome .icon-indis,
 .wt-block-content-user_welcome .icon-mypage {
-    content: none;
-}
-
-.wt-block-content-gedcom_block .icon-pedigree::before,
-.wt-block-content-gedcom_block .icon-indis::before,
-.wt-block-content-gedcom_block .icon-user_add::before,
-.wt-block-content-user_welcome .icon-pedigree::before,
-.wt-block-content-user_welcome .icon-indis::before,
-.wt-block-content-user_welcome .icon-mypage::before {
-    font-family: 'Font Awesome 6 Free';
-    font-style: normal;
-    font-size: 1.5rem;
-    content: var(--content);
     color: var(--fgColor-muted);
-    display: inline-block;
+    font-size: var(--base-size-24);
 }
 
 .wt-block-content-gedcom_block .icon-pedigree::before,
