@@ -272,19 +272,6 @@
     content: '\f06a';
 }
 
-/* Relatives tab, chart-box pedigree icon */
-
-.wt-chart-box-links .wt-chart-box-icon .icon-pedigree::before {
-    font-family: 'Font Awesome 6 Free';
-    font-style: normal;
-    display: inline-block;
-    content: '\f0e8';
-}
-
-.wt-chart-box-links .wt-chart-box-icon .icon-pedigree {
-    content: none;
-}
-
 /* wt-block-content-gedcom_block/wt-block-content-user_welcome */
 
 .wt-block-content-gedcom_block .icon-pedigree,
