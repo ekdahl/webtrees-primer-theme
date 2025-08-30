@@ -755,3 +755,19 @@ code {
 [dir] .search_hit {
     background-color: var(--bgColor-attention-muted);
 }
+
+/* Date picker */
+div[id^="caldiv"]:has(td.descriptionbox):has(td.optionbox) {
+    background-color: var(--overlay-bgColor) !important;
+}
+
+[dir] .descriptionbox, [dir] .optionbox {
+    border: var(--borderWidth-thin) solid var(--overlay-borderColor);
+    text-align: center;
+}
+
+div[id^="caldiv"] table table td:not([class]) {
+    background-color: var(--overlay-bgColor) !important;
+    border: var(--borderWidth-thin) solid var(--overlay-borderColor) !important;
+    text-align: center;
+}
