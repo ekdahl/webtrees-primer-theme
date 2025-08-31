@@ -767,7 +767,7 @@ div[id^="caldiv"]:has(td.descriptionbox):has(td.optionbox) {
 }
 
 div[id^="caldiv"] table table td:not([class]) {
-    background-color: var(--overlay-bgColor) !important;
+    background-color: var(--bgColor-muted) !important;
     border: var(--borderWidth-thin) solid var(--overlay-borderColor) !important;
     text-align: center;
 }
