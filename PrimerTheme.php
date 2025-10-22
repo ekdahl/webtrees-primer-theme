@@ -223,11 +223,12 @@ class PrimerTheme extends MinimalTheme implements ModuleCustomInterface, ModuleG
     private function palettes(): array
     {
         $palettes = [
-            'dark'                => I18N::translate('Dark default'),
-            'dark-dimmed'         => I18N::translate('Dark dimmed'),
-            'dark-high-contrast'  => I18N::translate('Dark high contrast'),
-            'light'               => I18N::translate('Light default'),
-            'light-high-contrast' => I18N::translate('Light high contrast'),
+            'light'                     => I18N::translate('Light'),
+            'light-high-contrast'       => I18N::translate('Light (high contrast)'),
+            'dark'                      => I18N::translate('Dark'),
+            'dark-high-contrast'        => I18N::translate('Dark (high contrast)'),
+            'dark-dimmed'               => I18N::translate('Soft dark'),
+            'dark-dimmed-high-contrast' => I18N::translate('Soft dark (high contrast)'),
         ];
 
         return $palettes;
