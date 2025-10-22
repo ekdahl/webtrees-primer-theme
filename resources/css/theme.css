@@ -511,6 +511,12 @@ table {
     --bs-btn-font-size: var(--body-font-size);
 }
 
+.btn-close {
+    --bs-btn-close-bg: var(--btn-close-bg);
+    --bs-btn-close-opacity: 0.75;
+    --bs-btn-close-hover-opacity: 1;
+}
+
 [dir] .btn-primary {
     --bs-btn-color: var(--button-primary-fgColor-rest);
     --bs-btn-hover-color: var(--button-primary-fgColor-rest);
