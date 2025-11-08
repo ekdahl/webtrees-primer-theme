@@ -5,11 +5,12 @@
 This theme for [webtrees](https://webtrees.net) takes inspiration from the look and feel on the GitHub web site. It also adds some icons for menus and other controls. The design used on GitHub is called the Primer Design System.
 
 ## Palettes
-* Dark default
-* Dark dimmed
-* Dark high contrast
-* Light default
-* Light high contrast
+* Light
+* Light (high contrast)
+* Dark
+* Dark (high contrast)
+* Soft dark
+* Soft dark (high contrast)
 
 ## Installation
 Download the code and unzip the files in a folder called webtrees-primer-theme inside the modules_v4 folder of your webtrees installation.
