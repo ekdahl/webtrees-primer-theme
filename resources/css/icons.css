@@ -1,14 +1,15 @@
 /* Navigation icons */
 
-.nav-item > .nav-link::before, .wt-tabs-individual a.nav-link::before {
-    font-family: "Font Awesome 6 Free";
-    display: inline-block;
-    margin-right: 5px;
-    color: var(--fgColor-muted);
-    content: var(--content);
-    font-size: var(--base-size-16);
+@media (min-width: 992px) {
+    .nav-item > .nav-link::before, .wt-tabs-individual a.nav-link::before {
+        font-family: "Font Awesome 6 Free";
+        display: inline-block;
+        margin-right: 5px;
+        color: var(--fgColor-muted);
+        content: var(--content);
+        font-size: var(--base-size-16);
+    }
 }
-
 /* Top menu */
 
 .nav-item.menu-mymenu a::before {
