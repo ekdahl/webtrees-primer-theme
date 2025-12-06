@@ -678,7 +678,7 @@ input[type="text"] {
     border: var(--borderWidth-thin) solid var(--bs-border-color);
 }
 
-[dir] .wt-ajax-load:empty {
+[dir] .wt-ajax-load:empty, [dir] #cboxLoadingGraphic {
     background-image: var(--spinner);
     height: var(--base-size-36);
 }
