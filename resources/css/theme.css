@@ -332,6 +332,8 @@ input[type="search"] {
 
 [dir] .wt-facts-table th {
     background-color: var(--bgColor-muted);
+    font-weight: var(--base-text-weight-semibold);
+
 }
 
 [dir] .wt-facts-table td {
