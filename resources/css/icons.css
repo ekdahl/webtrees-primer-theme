@@ -120,26 +120,6 @@
     --content: "\f0e8";
 }
 
-/* Individual/family icons */
-
-.wt-icon-individual::before, .wt-icon-family::before {
-    font-family: 'Font Awesome 6 Free';
-    content: var(--content);
-    color: var(--fgColor-muted);
-}
-
-.wt-icon-individual svg, .wt-icon-family svg {
-    display: none;
-}
-
-.wt-icon-individual::before {
-    --content: '\f007';
-}
-
-.wt-icon-family::before {
-    --content: '\e537';
-}
-
 /* Fact icons */
 
 .wt-fact-icon::before {
