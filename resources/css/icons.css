@@ -243,32 +243,10 @@
 
 /* wt-block-content-gedcom_block/wt-block-content-user_welcome */
 
-.wt-block-content-gedcom_block .icon-pedigree,
-.wt-block-content-gedcom_block .icon-indis,
-.wt-block-content-gedcom_block .icon-user_add,
-.wt-block-content-user_welcome .icon-pedigree,
-.wt-block-content-user_welcome .icon-indis,
-.wt-block-content-user_welcome .icon-mypage {
+.wt-block-content-gedcom_block [class^="wt-icon-"],
+.wt-block-content-user_welcome [class^="wt-icon-"] {
     color: var(--fgColor-muted);
     font-size: var(--base-size-24);
-}
-
-.wt-block-content-gedcom_block .icon-pedigree::before,
-.wt-block-content-user_welcome .icon-pedigree::before {
-    --content: '\f0e8';
-}
-
-.wt-block-content-gedcom_block .icon-indis::before,
-.wt-block-content-user_welcome .icon-indis::before {
-    --content: '\f007';
-}
-
-.wt-block-content-gedcom_block .icon-user_add::before {
-    --content: '\f234';
-}
-
-.wt-block-content-user_welcome .icon-mypage::before {
-    --content: '\f2bb';
 }
 
 /* Map links */
