@@ -140,18 +140,6 @@
     --content: '\e537';
 }
 
-/* Checkmark icon */
-
-.icon-selected {
-    font-family: "Font Awesome 6 Free";
-    font-weight: 900;
-    font-size: 16px;
-}
-
-.icon-selected, .icon-selected:before {
-    content: "\f00c\00a0";
-}
-
 /* Fact icons */
 
 .wt-fact-icon::before {
