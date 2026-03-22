@@ -217,7 +217,7 @@ class PrimerTheme extends MinimalTheme implements ModuleCustomInterface, ModuleG
         return response();
     }
 
-     /**
+    /**
      * @return array<string>
      */
     private function palettes(): array
@@ -256,7 +256,12 @@ class PrimerTheme extends MinimalTheme implements ModuleCustomInterface, ModuleG
         return $palette;
     }
 
-     /**
+    public function bootstrapColorScheme(): string
+    {
+        return str_starts_with($this->palette(), 'dark') ? 'dark' : 'light';
+    }
+
+    /**
      * @return array<string>
      */
     private function logos(): array
