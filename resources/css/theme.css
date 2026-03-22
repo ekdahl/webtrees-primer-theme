@@ -253,6 +253,7 @@ input[type="range"] {
 
 .wt-site-title {
     font-size: var(--body-font-size);
+    color: var(--fgColor-default);
 }
 
 .wt-page-title {
