@@ -217,8 +217,6 @@ input[type="range"] {
 
 [dir] .dropdown-item {
     color: var(--control-fgColor-rest);
-    margin-left: var(--base-size-8);
-    margin-right: var(--base-size-8);
 }
 
 [dir] .dropdown-item.active, [dir] .dropdown-item:active {
@@ -506,6 +504,7 @@ table {
     --bs-dropdown-link-active-bg: var(--control-transparent-bgColor-selected);
     --bs-dropdown-border-color: var(--bs-border-color);
     --bs-dropdown-divider-bg: var(--borderColor-muted);
+    --bs-dropdown-padding-x: var(--base-size-8);
 }
 
 [dir] .btn {
