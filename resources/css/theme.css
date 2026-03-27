@@ -776,3 +776,17 @@ div[id^="caldiv"] table table td:not([class]) {
     border: var(--borderWidth-thin) solid var(--overlay-borderColor) !important;
     text-align: center;
 }
+
+/* Interactive tree */
+
+[dir] .tvF {
+    background-color: var(--sex-f-bg) !important;
+}
+
+[dir] .tvM {
+    background-color: var(--sex-m-bg) !important;
+}
+
+[dir] #tv_tree div.tv_hline, [dir] #tv_tree div.tv_vline {
+    background-color: var(--bs-secondary-color);
+}
