@@ -244,7 +244,7 @@ input[type="range"] {
     box-shadow: 0 1px var(--bs-border-color) !important;
 }
 
-.accordion {
+[dir] .accordion-button:after {
     --bs-accordion-btn-icon: var(--accordion-btn-icon);
     --bs-accordion-btn-active-icon: var(--accordion-btn-icon);
 }
