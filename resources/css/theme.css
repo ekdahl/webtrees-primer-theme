@@ -89,6 +89,8 @@ h4 {
     font-size: var(--h4-size);
 }
 
+/* Layout */
+
 @media (min-width: 992px) {
     .container-lg {
         max-width: inherit;
@@ -319,6 +321,8 @@ input[type="search"] {
     margin-bottom: 0.75rem;
 }
 
+/* wt-facts-table borders */
+
 [dir] .wt-facts-table {
     border-collapse: separate;
 }
@@ -332,7 +336,6 @@ input[type="search"] {
 [dir] .wt-facts-table th {
     background-color: var(--bgColor-muted);
     font-weight: var(--base-text-weight-semibold);
-
 }
 
 [dir] .wt-facts-table td {
@@ -374,7 +377,12 @@ input[type="search"] {
     padding: var(--base-size-4);
 }
 
+[dir] .wt-facts-table label {
+    margin-right: var(--base-size-8);
+}
+
 /* Fact icons */
+
 .wt-fact-icon {
     width: var(--base-size-32);
     height: var(--base-size-32);
@@ -395,7 +403,6 @@ input[type="search"] {
         justify-content: center;
     }
 }
-/* End of fact icons */
 
 [dir] .wt-chart-box .wt-chart-box-dropdown {
     background-color: var(--bs-dropdown-bg);
@@ -408,6 +415,8 @@ table {
     border-spacing: 0px;
     border-collapse: collapse;
 }
+
+/* Accordion */
 
 [dir] .accordion {
     border-color: var(--bs-border-color);
@@ -457,9 +466,7 @@ table {
     border-color: var(--bs-border-color);
 }
 
-[dir] .wt-facts-table label {
-    margin-right: var(--base-size-8);
-}
+/* Navigation */
 
 .nav-link:hover {
     color: var(--bs-link-color);
@@ -506,6 +513,8 @@ table {
     --bs-dropdown-divider-bg: var(--borderColor-muted);
     --bs-dropdown-padding-x: var(--base-size-8);
 }
+
+/* Buttons */
 
 [dir] .btn {
     font-weight: 500;
@@ -631,6 +640,8 @@ input {
     text-decoration: underline;
 }
 
+/* Colorbox */
+
 [dir] #cboxOverlay {
     background: var(--overlay-backdrop-bgColor);
 }
@@ -660,6 +671,11 @@ input {
     border-radius: var(--borderRadius-medium);
 }
 
+[dir] #cboxLoadingGraphic {
+    background-image: var(--spinner);
+    height: var(--base-size-36);
+}
+
 .wt-chart-relationships .wt-chart-box {
     width: 20rem;
 }
@@ -680,10 +696,7 @@ input[type="text"] {
     border: var(--borderWidth-thin) solid var(--bs-border-color);
 }
 
-[dir] #cboxLoadingGraphic {
-    background-image: var(--spinner);
-    height: var(--base-size-36);
-}
+/* Silhouette */
 
 .wt-individual-silhouette-m, .icon-silhouette-m {
     content: var(--silhouette-m);
@@ -762,6 +775,7 @@ code {
 }
 
 /* Date picker */
+
 div[id^="caldiv"]:has(td.descriptionbox):has(td.optionbox) {
     background-color: var(--overlay-bgColor) !important;
 }
