@@ -163,16 +163,17 @@ input[type="range"] {
 
 [dir] .odometer {
     background: var(--bgColor-neutral-muted);
+    border-radius: var(--base-size-20);
+    padding: 0 var(--base-size-6);
 }
 
 .odometer {
     border: var(--borderWidth-thin) solid var(--counter-borderColor);
-    border-radius: 2em;
     color: var(--fgColor-default);
     font-family: inherit;
     font-size: var(--text-body-size-small);
     font-weight: var(--base-text-weight-medium);
-    padding: 0 6px;
+    min-width: var(--base-size-32);
     text-align: center;
 }
 
