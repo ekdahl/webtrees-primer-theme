@@ -89,6 +89,8 @@ h4 {
     font-size: var(--h4-size);
 }
 
+/* Layout */
+
 @media (min-width: 992px) {
     .container-lg {
         max-width: inherit;
@@ -161,16 +163,17 @@ input[type="range"] {
 
 [dir] .odometer {
     background: var(--bgColor-neutral-muted);
+    border-radius: var(--base-size-20);
+    padding: 0 var(--base-size-6);
 }
 
 .odometer {
     border: var(--borderWidth-thin) solid var(--counter-borderColor);
-    border-radius: 2em;
     color: var(--fgColor-default);
     font-family: inherit;
     font-size: var(--text-body-size-small);
     font-weight: var(--base-text-weight-medium);
-    padding: 0 6px;
+    min-width: var(--base-size-32);
     text-align: center;
 }
 
@@ -217,8 +220,6 @@ input[type="range"] {
 
 [dir] .dropdown-item {
     color: var(--control-fgColor-rest);
-    margin-left: var(--base-size-8);
-    margin-right: var(--base-size-8);
 }
 
 [dir] .dropdown-item.active, [dir] .dropdown-item:active {
@@ -246,13 +247,14 @@ input[type="range"] {
     box-shadow: 0 1px var(--bs-border-color) !important;
 }
 
-.accordion {
+[dir] .accordion-button:after {
     --bs-accordion-btn-icon: var(--accordion-btn-icon);
     --bs-accordion-btn-active-icon: var(--accordion-btn-icon);
 }
 
 .wt-site-title {
     font-size: var(--body-font-size);
+    color: var(--fgColor-default);
 }
 
 .wt-page-title {
@@ -320,6 +322,8 @@ input[type="search"] {
     margin-bottom: 0.75rem;
 }
 
+/* wt-facts-table borders */
+
 [dir] .wt-facts-table {
     border-collapse: separate;
 }
@@ -333,7 +337,6 @@ input[type="search"] {
 [dir] .wt-facts-table th {
     background-color: var(--bgColor-muted);
     font-weight: var(--base-text-weight-semibold);
-
 }
 
 [dir] .wt-facts-table td {
@@ -375,7 +378,12 @@ input[type="search"] {
     padding: var(--base-size-4);
 }
 
+[dir] .wt-facts-table label {
+    margin-right: var(--base-size-8);
+}
+
 /* Fact icons */
+
 .wt-fact-icon {
     width: var(--base-size-32);
     height: var(--base-size-32);
@@ -396,7 +404,6 @@ input[type="search"] {
         justify-content: center;
     }
 }
-/* End of fact icons */
 
 [dir] .wt-chart-box .wt-chart-box-dropdown {
     background-color: var(--bs-dropdown-bg);
@@ -409,6 +416,8 @@ table {
     border-spacing: 0px;
     border-collapse: collapse;
 }
+
+/* Accordion */
 
 [dir] .accordion {
     border-color: var(--bs-border-color);
@@ -458,9 +467,7 @@ table {
     border-color: var(--bs-border-color);
 }
 
-[dir] .wt-facts-table label {
-    margin-right: var(--base-size-8);
-}
+/* Navigation */
 
 .nav-link:hover {
     color: var(--bs-link-color);
@@ -505,7 +512,10 @@ table {
     --bs-dropdown-link-active-bg: var(--control-transparent-bgColor-selected);
     --bs-dropdown-border-color: var(--bs-border-color);
     --bs-dropdown-divider-bg: var(--borderColor-muted);
+    --bs-dropdown-padding-x: var(--base-size-8);
 }
+
+/* Buttons */
 
 [dir] .btn {
     font-weight: 500;
@@ -631,6 +641,8 @@ input {
     text-decoration: underline;
 }
 
+/* Colorbox */
+
 [dir] #cboxOverlay {
     background: var(--overlay-backdrop-bgColor);
 }
@@ -660,6 +672,11 @@ input {
     border-radius: var(--borderRadius-medium);
 }
 
+[dir] #cboxLoadingGraphic {
+    background-image: var(--spinner);
+    height: var(--base-size-36);
+}
+
 .wt-chart-relationships .wt-chart-box {
     width: 20rem;
 }
@@ -680,10 +697,7 @@ input[type="text"] {
     border: var(--borderWidth-thin) solid var(--bs-border-color);
 }
 
-[dir] .wt-ajax-load:empty, [dir] #cboxLoadingGraphic {
-    background-image: var(--spinner);
-    height: var(--base-size-36);
-}
+/* Silhouette */
 
 .wt-individual-silhouette-m, .icon-silhouette-m {
     content: var(--silhouette-m);
@@ -762,6 +776,7 @@ code {
 }
 
 /* Date picker */
+
 div[id^="caldiv"]:has(td.descriptionbox):has(td.optionbox) {
     background-color: var(--overlay-bgColor) !important;
 }
@@ -775,4 +790,18 @@ div[id^="caldiv"] table table td:not([class]) {
     background-color: var(--bgColor-muted) !important;
     border: var(--borderWidth-thin) solid var(--overlay-borderColor) !important;
     text-align: center;
+}
+
+/* Interactive tree */
+
+[dir] .tvF {
+    background-color: var(--sex-f-bg) !important;
+}
+
+[dir] .tvM {
+    background-color: var(--sex-m-bg) !important;
+}
+
+[dir] #tv_tree div.tv_hline, [dir] #tv_tree div.tv_vline {
+    background-color: var(--bs-secondary-color);
 }
