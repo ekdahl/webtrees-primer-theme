@@ -1,0 +1,68 @@
+name: Create Release
+
+on:
+  workflow_dispatch:
+
+jobs:
+  create_release:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Read version from PrimerTheme.php
+        id: ver
+        run: |
+          if [ -f PrimerTheme.php ]; then
+            VERSION=$(sed -n "s/.*CUSTOM_VERSION *= *'\([^']*\)'.*/\1/p" PrimerTheme.php)
+          else
+            echo "PrimerTheme.php not found" >&2
+            exit 1
+          fi
+          if [ -z "$VERSION" ]; then
+            echo "Could not parse version from PrimerTheme.php" >&2
+            exit 1
+          fi
+          echo "version=$VERSION" >> $GITHUB_OUTPUT
+
+
+
+      - name: Create zip artifact (files under webtrees-primer-theme/ folder)
+        run: |
+          VERSION=${{ steps.ver.outputs.version }}
+          PREFIX="webtrees-primer-theme/"
+          # Create zip from tracked files excluding latest-version.txt, placing all files under the PREFIX folder
+          files=$(git ls-files | grep -v '^latest-version.txt$' || true)
+          if [ -z "$files" ]; then
+            echo "No files to archive" >&2
+            exit 1
+          fi
+          # Use git archive to preserve tracked file paths and add a top-level prefix folder named exactly webtrees-primer-theme/
+          git ls-files | grep -v '^latest-version.txt$' | tr '\n' '\0' | xargs -0 git archive --format=zip --prefix="$PREFIX" -o "webtrees-primer-theme-${VERSION}.zip" HEAD
+
+      - name: Create GitHub Release (generate release notes)
+        id: gh_release
+        run: |
+          VERSION=${{ steps.ver.outputs.version }}
+          API_URL="https://api.github.com/repos/${GITHUB_REPOSITORY}/releases"
+          echo "Creating release for tag $VERSION with generated release notes"
+          response=$(curl -s -X POST -H "Accept: application/vnd.github+json" -H "Authorization: token ${GITHUB_TOKEN}" "$API_URL" -d "{\"tag_name\":\"$VERSION\",\"name\":\"Release $VERSION\",\"generate_release_notes\":true,\"draft\":false,\"prerelease\":false}")
+          upload_url=$(echo "$response" | python3 -c "import sys, json; print(json.load(sys.stdin).get('upload_url',''))")
+          if [ -z "$upload_url" ]; then
+            echo "Failed to create release:"
+            echo "$response"
+            exit 1
+          fi
+          echo "upload_url=$upload_url" >> $GITHUB_OUTPUT
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Upload release asset
+        uses: actions/upload-release-asset@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          upload_url: ${{ steps.gh_release.outputs.upload_url }}
+          asset_path: ./webtrees-primer-theme-${{ steps.ver.outputs.version }}.zip
+          asset_name: webtrees-primer-theme-${{ steps.ver.outputs.version }}.zip
+          asset_content_type: application/zip
