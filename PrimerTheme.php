@@ -6,6 +6,7 @@ namespace Primer;
 
 use Fisharebest\Webtrees\Auth;
 use Fisharebest\Webtrees\FlashMessages;
+use Fisharebest\Webtrees\Http\RequestHandlers\ModuleAction;
 use Fisharebest\Webtrees\I18N;
 use Fisharebest\Webtrees\Menu;
 use Fisharebest\Webtrees\Session;
@@ -181,7 +182,7 @@ class PrimerTheme extends MinimalTheme implements ModuleCustomInterface, ModuleG
         $palette = $this->palette();
 
         foreach ($this->palettes() as $palette_id => $palette_name) {
-            $url = route('module', ['module' => $this->name(), 'action' => 'Palette', 'palette' => $palette_id]);
+            $url = route(ModuleAction::class, ['module' => $this->name(), 'action' => 'Palette', 'palette' => $palette_id]);
 
             $submenu = new Menu(
                 $palette_name,
