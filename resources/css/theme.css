@@ -265,16 +265,6 @@ input[type="range"] {
     justify-content: left;
 }
 
-[dir] .wt-global, [dir] ::backdrop {
-    background-color: var(--bs-body-bg);
-    color: var(--bs-body-color);
-    font-size: var(--body-font-size);
-}
-
-.wt-global, ::backdrop {
-    color: var(--bs-body-color);
-}
-
 .wt-global {
     overflow-y: auto;
 }
