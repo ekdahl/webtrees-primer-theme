@@ -288,10 +288,6 @@ input[type="search"] {
     padding: 0.25rem 0.5rem;
 }
 
-.ts-control, .ts-control input, .ts-dropdown {
-    color: var(--bs-body-color);
-}
-
 [dir] .wt-header-wrapper {
     background: var(--bgColor-inset);
     box-shadow: inset 0 -1px var(--borderColor-default);
@@ -442,14 +438,10 @@ table {
 }
 
 [dir] .wt-chart-box-m {
-    background: var(--bs-body-bg);
-    background: var(--sex-m-bg);
     border-color: var(--bs-border-color);
 }
 
 [dir] .wt-chart-box-f {
-    background: var(--bs-body-bg);
-    background: var(--sex-f-bg);
     border-color: var(--bs-border-color);
 }
 
@@ -597,10 +589,6 @@ span.twitter-typeahead .tt-suggestion {
     background-color: var(--control-transparent-bgColor-hover);
 }
 
-[dir] table.faq, [dir] table.faq tr:nth-child(odd) td, [dir] div.faq_title {
-    background-color: transparent;
-}
-
 [dir] .mb-4 {
     margin-bottom: 0.875rem !important;
 }
@@ -677,10 +665,6 @@ input[type="text"] {
     border: var(--borderWidth-thin) solid var(--bs-border-color);
     border-radius: var(--borderRadius-medium);
     background-color: var(--bgColor-muted);
-}
-
-[dir] .wt-calendar-month .wt-page-options-label, [dir] .wt-calendar-month .wt-page-options-value {
-    border: var(--borderWidth-thin) solid var(--bs-border-color);
 }
 
 /* Silhouette */
