@@ -686,6 +686,14 @@ input[type="text"] {
     transform: scaleX(-1);
 }
 
+/* Workaround for Fancy treeview block:
+   There are no dimensions on the silhouette container,
+   but thumbnails are requested as 30x40 pixels */
+.wt-block-content-_jc-fancy-treeview_ .icon-silhouette {
+    max-height: 40px;
+    max-width: 30px;
+}
+
 #sb_desc_content {
     font-size: var(--font-size-small);
 }
