@@ -265,16 +265,6 @@ input[type="range"] {
     justify-content: left;
 }
 
-[dir] .wt-global, [dir] ::backdrop {
-    background-color: var(--bs-body-bg);
-    color: var(--bs-body-color);
-    font-size: var(--body-font-size);
-}
-
-.wt-global, ::backdrop {
-    color: var(--bs-body-color);
-}
-
 .wt-global {
     overflow-y: auto;
 }
@@ -298,12 +288,9 @@ input[type="search"] {
     padding: 0.25rem 0.5rem;
 }
 
-.ts-control, .ts-control input, .ts-dropdown {
-    color: var(--bs-body-color);
-}
-
 [dir] .wt-header-wrapper {
     background: var(--bgColor-inset);
+    box-shadow: inset 0 -1px var(--borderColor-default);
 }
 
 #quick-search {
@@ -311,11 +298,6 @@ input[type="search"] {
     border-radius: var(--bs-border-radius);
     border-top-right-radius: 0px;
     border-bottom-right-radius: 0px;
-}
-
-[dir] .wt-primary-navigation {
-    border-bottom-width: var(--borderWidth-thin);
-    border-color: var(--bs-border-color);
 }
 
 [dir] .table {
@@ -456,14 +438,10 @@ table {
 }
 
 [dir] .wt-chart-box-m {
-    background: var(--bs-body-bg);
-    background: var(--sex-m-bg);
     border-color: var(--bs-border-color);
 }
 
 [dir] .wt-chart-box-f {
-    background: var(--bs-body-bg);
-    background: var(--sex-f-bg);
     border-color: var(--bs-border-color);
 }
 
@@ -611,10 +589,6 @@ span.twitter-typeahead .tt-suggestion {
     background-color: var(--control-transparent-bgColor-hover);
 }
 
-[dir] table.faq, [dir] table.faq tr:nth-child(odd) td, [dir] div.faq_title {
-    background-color: transparent;
-}
-
 [dir] .mb-4 {
     margin-bottom: 0.875rem !important;
 }
@@ -693,10 +667,6 @@ input[type="text"] {
     background-color: var(--bgColor-muted);
 }
 
-[dir] .wt-calendar-month .wt-page-options-label, [dir] .wt-calendar-month .wt-page-options-value {
-    border: var(--borderWidth-thin) solid var(--bs-border-color);
-}
-
 /* Silhouette */
 
 .wt-individual-silhouette-m, .icon-silhouette-m {
@@ -714,6 +684,14 @@ input[type="text"] {
 .icon-silhouette-m, .icon-silhouette-f {
     height: 4.5rem;
     transform: scaleX(-1);
+}
+
+/* Workaround for Fancy treeview block:
+   There are no dimensions on the silhouette container,
+   but thumbnails are requested as 30x40 pixels */
+.wt-block-content-_jc-fancy-treeview_ .icon-silhouette {
+    max-height: 40px;
+    max-width: 30px;
 }
 
 #sb_desc_content {
