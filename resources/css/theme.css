@@ -447,7 +447,7 @@ table {
 
 /* Navigation */
 
-.nav-link:hover {
+.nav-link:hover, .nav-link:focus {
     color: var(--bs-link-color);
     text-decoration: none;
     border-top-color: transparent;
