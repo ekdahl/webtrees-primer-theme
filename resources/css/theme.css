@@ -677,6 +677,14 @@ input[type="text"] {
     content: var(--silhouette-f);
 }
 
+.wt-individual-silhouette-x, .icon-silhouette-x {
+    content: var(--silhouette-x);
+}
+
+.wt-individual-silhouette-u, .icon-silhouette-u {
+    content: var(--silhouette-u);
+}
+
 .wt-individual-silhouette-m, .wt-individual-silhouette-f {
     padding: var(--base-size-4);
 }
