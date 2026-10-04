@@ -53,16 +53,11 @@ jobs:
             echo "$response"
             exit 1
           fi
-          echo "upload_url=$upload_url" >> $GITHUB_OUTPUT
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Upload release asset
-        uses: actions/upload-release-asset@v1
+        run: gh release upload "$VERSION" "webtrees-primer-theme-${VERSION}.zip" --repo "$GITHUB_REPOSITORY"
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          upload_url: ${{ steps.gh_release.outputs.upload_url }}
-          asset_path: ./webtrees-primer-theme-${{ steps.ver.outputs.version }}.zip
-          asset_name: webtrees-primer-theme-${{ steps.ver.outputs.version }}.zip
-          asset_content_type: application/zip
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          VERSION: ${{ steps.ver.outputs.version }}
