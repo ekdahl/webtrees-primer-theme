@@ -125,8 +125,18 @@ class PrimerTheme extends MinimalTheme implements ModuleCustomInterface, ModuleG
      */
     public function headContent(): string
     {
+        $palette = $this->palette();
+        $silhouettes = '';
+
+        foreach (['m', 'f', 'x', 'u'] as $type) {
+            $silhouettes .= '--silhouette-' . $type . ': url("' . $this->assetUrl('images/' . $palette . '/silhouette-' . $type . '.svg') . '");';
+        }
+
         return
             '<style>
+            :root {
+                ' . $silhouettes . '
+            }
             @font-face {
                 font-family: \'Font Awesome 6 Free\';
                 src: url("' . $this->assetUrl('fonts/fa-solid-900.woff2') . '") format("woff2");
