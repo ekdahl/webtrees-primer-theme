@@ -651,7 +651,7 @@ input {
     height: var(--base-size-36);
 }
 
-.wt-chart-relationships .wt-chart-box {
+.wt-chart-relationships .wt-chart-box, .wt-chart-pedigree .wt-chart-box {
     width: 20rem;
 }
 
