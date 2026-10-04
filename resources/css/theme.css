@@ -690,7 +690,7 @@ input[type="text"] {
 }
 
 .icon-silhouette-m, .icon-silhouette-f, .icon-silhouette-x, .icon-silhouette-u {
-    height: 4.5rem;
+    height: 50px;
     transform: scaleX(-1);
 }
 
