@@ -28,7 +28,7 @@ class PrimerTheme extends MinimalTheme implements ModuleCustomInterface, ModuleG
     use ModuleGlobalTrait;
 
     public const CUSTOM_AUTHOR = 'Fredrik Ekdahl';
-    public const CUSTOM_VERSION = '2.2.6.1';
+    public const CUSTOM_VERSION = '2.2.6.2-dev';
     public const GITHUB_REPO = 'ekdahl/webtrees-primer-theme';
     public const CUSTOM_SUPPORT_URL = 'https://github.com/ekdahl/webtrees-primer-theme';
     public const CUSTOM_LATEST_VERSION = 'https://raw.githubusercontent.com/' . self::GITHUB_REPO . '/main/latest-version.txt';
@@ -125,8 +125,18 @@ class PrimerTheme extends MinimalTheme implements ModuleCustomInterface, ModuleG
      */
     public function headContent(): string
     {
+        $palette = $this->palette();
+        $silhouettes = '';
+
+        foreach (['m', 'f', 'x', 'u'] as $type) {
+            $silhouettes .= '--silhouette-' . $type . ': url("' . $this->assetUrl('images/' . $palette . '/silhouette-' . $type . '.svg') . '");';
+        }
+
         return
             '<style>
+            :root {
+                ' . $silhouettes . '
+            }
             @font-face {
                 font-family: \'Font Awesome 6 Free\';
                 src: url("' . $this->assetUrl('fonts/fa-solid-900.woff2') . '") format("woff2");
