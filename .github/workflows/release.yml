@@ -46,7 +46,7 @@ jobs:
           VERSION=${{ steps.ver.outputs.version }}
           API_URL="https://api.github.com/repos/${GITHUB_REPOSITORY}/releases"
           echo "Creating release for tag $VERSION with generated release notes"
-          response=$(curl -s -X POST -H "Accept: application/vnd.github+json" -H "Authorization: token ${GITHUB_TOKEN}" "$API_URL" -d "{\"tag_name\":\"$VERSION\",\"name\":\"Release $VERSION\",\"generate_release_notes\":true,\"draft\":false,\"prerelease\":false}")
+          response=$(curl -s -X POST -H "Accept: application/vnd.github+json" -H "Authorization: token ${GITHUB_TOKEN}" "$API_URL" -d "{\"tag_name\":\"$VERSION\",\"name\":\"Release $VERSION\",\"generate_release_notes\":true,\"draft\":true,\"prerelease\":false}")
           upload_url=$(echo "$response" | python3 -c "import sys, json; print(json.load(sys.stdin).get('upload_url',''))")
           if [ -z "$upload_url" ]; then
             echo "Failed to create release:"
