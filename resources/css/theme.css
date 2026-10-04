@@ -689,7 +689,7 @@ input[type="text"] {
     padding: var(--base-size-4);
 }
 
-.icon-silhouette-m, .icon-silhouette-f {
+.icon-silhouette-m, .icon-silhouette-f, .icon-silhouette-x, .icon-silhouette-u {
     height: 4.5rem;
     transform: scaleX(-1);
 }
