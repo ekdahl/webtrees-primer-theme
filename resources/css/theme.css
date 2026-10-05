@@ -437,6 +437,13 @@ table {
     border-color: var(--bs-border-color);
 }
 
+.wt-chart-box {
+    height: inherit;
+    min-height: 3.5rem;
+    line-height: 1.2;
+    background: var(--bgColor-muted);
+}
+
 [dir] .wt-chart-box-m {
     border-color: var(--bs-border-color);
 }
