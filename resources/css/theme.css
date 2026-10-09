@@ -456,11 +456,7 @@ table {
     background: var(--bgColor-muted);
 }
 
-[dir] .wt-chart-box-m {
-    border-color: var(--bs-border-color);
-}
-
-[dir] .wt-chart-box-f {
+[dir] .wt-chart-box {
     border-color: var(--bs-border-color);
 }
 
