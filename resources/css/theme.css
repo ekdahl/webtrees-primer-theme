@@ -692,11 +692,11 @@ input[type="text"] {
     content: var(--silhouette-u);
 }
 
-.wt-individual-silhouette-m, .wt-individual-silhouette-f {
+.wt-individual-silhouette {
     padding: var(--base-size-4);
 }
 
-.icon-silhouette-m, .icon-silhouette-f, .icon-silhouette-x, .icon-silhouette-u {
+.icon-silhouette {
     height: 50px;
     transform: scaleX(-1);
 }
