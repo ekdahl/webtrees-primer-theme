@@ -126,6 +126,9 @@ class PrimerTheme extends MinimalTheme implements ModuleCustomInterface, ModuleG
     public function headContent(): string
     {
         $palette = $this->palette();
+        $colorMode = str_starts_with($palette, 'dark') ? 'dark' : 'light';
+        $themeAttribute = $colorMode === 'dark' ? 'darkTheme' : 'lightTheme';
+        $themeName = str_replace('-', '_', $palette);
         $silhouettes = '';
 
         foreach (['m', 'f', 'x', 'u'] as $type) {
@@ -133,7 +136,12 @@ class PrimerTheme extends MinimalTheme implements ModuleCustomInterface, ModuleG
         }
 
         return
-            '<style>
+            '<script>
+            const root = document.documentElement;
+            root.dataset.colorMode = ' . json_encode($colorMode, JSON_HEX_TAG | JSON_THROW_ON_ERROR) . ';
+            root.dataset.' . $themeAttribute . ' = ' . json_encode($themeName, JSON_HEX_TAG | JSON_THROW_ON_ERROR) . ';
+            </script>
+            <style>
             :root {
                 ' . $silhouettes . '
             }
