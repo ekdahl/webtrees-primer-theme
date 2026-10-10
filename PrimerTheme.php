@@ -174,6 +174,7 @@ class PrimerTheme extends MinimalTheme implements ModuleCustomInterface, ModuleG
         $stylesheets[] = $this->assetUrl('css/theme.css');
         $stylesheets[] = $this->assetUrl('css/charts.css');
         $stylesheets[] = $this->assetUrl('css/icons.css');
+        $stylesheets[] = $this->assetUrl('css/theme-icons.css');
         $stylesheets[] = $this->assetUrl('css/primer/base/size/size.css');
         $stylesheets[] = $this->assetUrl('css/primer/base/typography/typography.css');
         $stylesheets[] = $this->assetUrl('css/primer/functional/size/border.css');

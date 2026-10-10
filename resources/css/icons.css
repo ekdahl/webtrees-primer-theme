@@ -10,6 +10,7 @@
         font-size: var(--base-size-16);
     }
 }
+
 /* Top menu */
 
 .nav-item.menu-mymenu a::before {
