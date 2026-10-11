@@ -52,7 +52,6 @@
     --bs-link-color: var(--fgColor-default);
     --bs-link-decoration: none;
     --bs-link-hover-color: var(--fgColor-accent);
-    --bs-link-hover-decoration: underline;
     --bs-nav-link-font-size: var(--bs-body-font-size);
     --bs-nav-tabs-link-active-color: var(--fgColor-default);
     --bs-secondary-bg: var(--bs-body-bg);
