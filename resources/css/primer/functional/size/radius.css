@@ -1,0 +1,7 @@
+:root {
+  --borderRadius-full: 624.9375rem; /** Shape token for fully rounded or pill-shaped elements. */
+  --borderRadius-large: 0.75rem; /** Scale token: 12px radius for larger surfaces or softer container treatments. */
+  --borderRadius-medium: 0.375rem; /** Scale token: 6px radius in the border-radius scale. Use when selecting a specific radius intentionally. */
+  --borderRadius-small: 0.1875rem; /** Scale token: 3px radius for compact UI elements or small component variants. */
+  --borderRadius-default: var(--borderRadius-medium); /** Semantic token: preferred default border radius for standard UI components. Use this in normal component code unless a specific radius is intentionally required. */
+}

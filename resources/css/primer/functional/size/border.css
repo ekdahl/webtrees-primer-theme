@@ -1,15 +1,13 @@
 :root {
-  --boxShadow-thin: inset 0 0 0 max(1px, 0.0625rem);
-  --boxShadow-thick: inset 0 0 0 max(2px, 0.125rem);
-  --boxShadow-thicker: inset 0 0 0 max(4px, 0.25rem);
-  --borderWidth-thin: max(1px, 0.0625rem);
-  --borderWidth-thick: max(2px, 0.125rem);
-  --borderWidth-thicker: max(4px, 0.25rem);
-  --borderRadius-small: 0.1875rem;
-  --borderRadius-medium: 0.375rem;
-  --borderRadius-large: 0.75rem;
-  --borderRadius-full: 624.9375rem;
-  --borderRadius-default: 0.375rem;
-  --outline-focus-offset: -0.125rem;
-  --outline-focus-width: 0.125rem;
+  --borderWidth-thick: 0.125rem; /** Scale token: 2px border width for emphasis or focus states. */
+  --borderWidth-thicker: 0.25rem; /** Scale token: 4px border width for strong emphasis. */
+  --borderWidth-thin: 0.0625rem; /** Scale token: 1px border width. Use when selecting an explicit size from the border-width scale. */
+  --focus-outline-offset: -0.125rem; /** Focus outline offset (-2px). Negative value creates an inset outline for keyboard focus indicators, ensuring the focus ring stays within the element bounds */
+  --focus-outline-width: 0.125rem; /** Focus outline width (2px). Standard width for keyboard focus indicators to meet WCAG 2.4.7 accessibility requirements */
+  --borderWidth-default: var(--borderWidth-thin); /** Semantic token: preferred default border width for standard component borders. Use this in normal component code unless a specific scale value is required. */
+  --boxShadow-thick: inset 0 0 0 var(--borderWidth-thick); /** Thick shadow (2px) used instead of a border for emphasis without layout shift */
+  --boxShadow-thicker: inset 0 0 0 var(--borderWidth-thicker); /** Thickest shadow (4px) used for high emphasis borders without layout shift. Use sparingly for maximum visual impact */
+  --boxShadow-thin: inset 0 0 0 var(--borderWidth-thin); /** Thin shadow used instead of a border to prevent layout shift */
+  --outline-focus-offset: var(--focus-outline-offset); /** Deprecated. Use focus.outline-offset instead. */
+  --outline-focus-width: var(--focus-outline-width); /** Deprecated. Use focus.outline-width instead. */
 }
