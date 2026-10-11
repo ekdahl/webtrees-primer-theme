@@ -1,6 +1,17 @@
 :root {
+  --base-text-lineHeight-loose: 1.75; /** Use sparingly for very small text or when maximum readability is critical. Best for footnotes, legal text, or content requiring high accessibility. */
+  --base-text-lineHeight-normal: 1.5; /** Default choice for body text and general UI content. Provides optimal readability for paragraphs, descriptions, and most multi-line text. Use when unsure which line-height to pick. */
+  --base-text-lineHeight-relaxed: 1.625; /** Use for longer-form content, smaller text sizes (12-13px), or when increased readability is desired. Good for text that needs extra breathing room. */
+  --base-text-lineHeight-snug: 1.375; /** Use for display text, large headings, or short multi-line text where moderate density is needed. Good for hero sections and marketing headlines. */
+  --base-text-lineHeight-tight: 1.25; /** Use for single-line text in compact UI elements like labels, badges, buttons, or captions where vertical space is limited. Not recommended for multi-line body text due to reduced readability. */
+  --base-text-size-2xl: 2.5rem; /** 40px - Display text for hero sections. */
+  --base-text-size-lg: 1.25rem; /** 20px - Medium titles and subtitles. */
+  --base-text-size-md: 1rem; /** 16px - Large body text and small titles. */
+  --base-text-size-sm: 0.875rem; /** 14px - Default body text size for UI. */
+  --base-text-size-xl: 2rem; /** 32px - Large titles and page headings. */
+  --base-text-size-xs: 0.75rem; /** 12px - Smallest text size for captions and compact UI elements. */
   --base-text-weight-light: 300;
-  --base-text-weight-normal: 400;
   --base-text-weight-medium: 500;
+  --base-text-weight-normal: 400;
   --base-text-weight-semibold: 600;
 }

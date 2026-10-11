@@ -1,48 +1,47 @@
 :root {
-  --text-codeInline-size: 0.9285em;
-  --text-codeBlock-lineHeight: 1.5385;
+  --fontStack-monospace: ui-monospace, SFMono-Regular, SF Mono, Menlo, Consolas, Liberation Mono, monospace; /** Monospace font stack for code, technical content, and tabular data. */
+  --fontStack-sansSerif: "Mona Sans VF", -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans Backtick Fix", "Noto Sans", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji"; /** Sans-serif font stack for body text and general UI elements. */
+  --fontStack-sansSerifDisplay: "Mona Sans VF", -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans Backtick Fix", "Noto Sans", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji"; /** Display font stack for headings and titles. Same as sansSerif but semantically distinct. */
+  --fontStack-system: "Mona Sans VF", -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans Backtick Fix", "Noto Sans", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji"; /** Mona Sans–first font stack with system fallbacks, optimized for cross-platform rendering. Primary font stack for all UI text where Mona Sans is available. */
   --text-codeBlock-size: 0.8125rem;
-  --text-caption-lineHeight: 1.3333;
-  --text-caption-size: 0.75rem;
-  --text-body-lineHeight-small: 1.6666;
-  --text-body-lineHeight-medium: 1.4285;
-  --text-body-lineHeight-large: 1.5;
-  --text-body-size-small: 0.75rem;
-  --text-body-size-medium: 0.875rem;
-  --text-body-size-large: 1rem;
-  --text-subtitle-lineHeight: 1.6;
-  --text-subtitle-size: 1.25rem;
-  --text-title-lineHeight-small: 1.5;
-  --text-title-lineHeight-medium: 1.6;
-  --text-title-lineHeight-large: 1.5;
-  --text-title-size-small: 1rem;
-  --text-title-size-medium: 1.25rem;
-  --text-title-size-large: 2rem;
-  --text-display-lineHeight: 1.4;
-  --text-display-size: 2.5rem;
-  --text-display-lineBoxHeight: 1.4;
-  --fontStack-monospace: ui-monospace, SFMono-Regular, SF Mono, Menlo, Consolas, Liberation Mono, monospace;
-  --fontStack-sansSerifDisplay: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
-  --fontStack-sansSerif: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
-  --fontStack-system: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
-  --text-codeInline-weight: var(--base-text-weight-normal);
-  --text-codeBlock-weight: var(--base-text-weight-normal);
-  --text-caption-weight: var(--base-text-weight-normal);
+  --text-codeInline-size: 0.9285em;
+  --text-body-lineHeight-large: var(--base-text-lineHeight-normal);
+  --text-body-lineHeight-medium: var(--base-text-lineHeight-normal);
+  --text-body-lineHeight-small: var(--base-text-lineHeight-relaxed);
+  --text-body-size-large: var(--base-text-size-md);
+  --text-body-size-medium: var(--base-text-size-sm);
+  --text-body-size-small: var(--base-text-size-xs);
   --text-body-weight: var(--base-text-weight-normal);
-  --text-subtitle-weight: var(--base-text-weight-normal);
-  --text-title-weight-small: var(--base-text-weight-semibold);
-  --text-title-weight-medium: var(--base-text-weight-semibold);
-  --text-title-weight-large: var(--base-text-weight-semibold);
+  --text-caption-lineHeight: var(--base-text-lineHeight-tight);
+  --text-caption-size: var(--base-text-size-xs);
+  --text-caption-weight: var(--base-text-weight-normal);
+  --text-codeBlock-lineHeight: var(--base-text-lineHeight-normal);
+  --text-codeBlock-weight: var(--base-text-weight-normal);
+  --text-codeInline-weight: var(--base-text-weight-normal);
+  --text-display-lineHeight: var(--base-text-lineHeight-snug);
+  --text-display-size: var(--base-text-size-2xl);
   --text-display-weight: var(--base-text-weight-medium);
-  --text-codeInline-shorthand: var(--text-codeInline-weight) var(--text-codeInline-size) var(--fontStack-monospace);
-  --text-codeBlock-shorthand: var(--text-codeBlock-weight) var(--text-codeBlock-size) / var(--text-codeBlock-lineHeight) var(--fontStack-monospace);
-  --text-caption-shorthand: var(--text-caption-weight) var(--text-caption-size) / var(--text-caption-lineHeight) var(--fontStack-sansSerif);
-  --text-body-shorthand-small: var(--text-body-weight) var(--text-body-size-small) / var(--text-body-lineHeight-small) var(--fontStack-sansSerif);
-  --text-body-shorthand-medium: var(--text-body-weight) var(--text-body-size-medium) / var(--text-body-lineHeight-medium) var(--fontStack-sansSerif);
-  --text-body-shorthand-large: var(--text-body-weight) var(--text-body-size-large) / var(--text-body-lineHeight-large) var(--fontStack-sansSerif);
-  --text-subtitle-shorthand: var(--text-subtitle-weight) var(--text-subtitle-size) / var(--text-subtitle-lineHeight) var(--fontStack-sansSerifDisplay);
-  --text-title-shorthand-small: var(--text-title-weight-small) var(--text-title-size-small) / var(--text-title-lineHeight-small) var(--fontStack-sansSerif);
-  --text-title-shorthand-medium: var(--text-title-weight-medium) var(--text-title-size-medium) / var(--text-title-lineHeight-medium) var(--fontStack-sansSerifDisplay);
-  --text-title-shorthand-large: var(--text-title-weight-large) var(--text-title-size-large) / var(--text-title-lineHeight-large) var(--fontStack-sansSerifDisplay);
-  --text-display-shorthand: var(--text-display-weight) var(--text-display-size) / var(--text-display-lineHeight) var(--fontStack-sansSerifDisplay);
+  --text-subtitle-lineHeight: var(--base-text-lineHeight-relaxed);
+  --text-subtitle-size: var(--base-text-size-lg);
+  --text-subtitle-weight: var(--base-text-weight-normal);
+  --text-title-lineHeight-large: var(--base-text-lineHeight-normal);
+  --text-title-lineHeight-medium: var(--base-text-lineHeight-relaxed);
+  --text-title-lineHeight-small: var(--base-text-lineHeight-normal);
+  --text-title-size-large: var(--base-text-size-xl);
+  --text-title-size-medium: var(--base-text-size-lg);
+  --text-title-size-small: var(--base-text-size-md);
+  --text-title-weight-large: var(--base-text-weight-semibold);
+  --text-title-weight-medium: var(--base-text-weight-semibold);
+  --text-title-weight-small: var(--base-text-weight-semibold);
+  --text-body-shorthand-large: var(--text-body-weight) var(--text-body-size-large) / var(--text-body-lineHeight-large) var(--fontStack-sansSerif); /** User-generated content, markdown rendering. */
+  --text-body-shorthand-medium: var(--text-body-weight) var(--text-body-size-medium) / var(--text-body-lineHeight-medium) var(--fontStack-sansSerif); /** Default UI font. Most commonly used for body text. */
+  --text-body-shorthand-small: var(--text-body-weight) var(--text-body-size-small) / var(--text-body-lineHeight-small) var(--fontStack-sansSerif); /** Small body text for discrete UI applications, such as helper, footnote text. Should be used sparingly across pages. Line-height matches Body (medium) at 20px. */
+  --text-caption-shorthand: var(--text-caption-weight) var(--text-caption-size) / var(--text-caption-lineHeight) var(--fontStack-sansSerif); /** Compact small font with a smaller line height of 16px. Use it for single-line scenarios, as the small sizing doesn’t pass accessibility requirements. */
+  --text-codeBlock-shorthand: var(--text-codeBlock-weight) var(--text-codeBlock-size) / var(--text-codeBlock-lineHeight) var(--fontStack-monospace); /** Default style for rendering code blocks. */
+  --text-codeInline-shorthand: var(--text-codeInline-weight) var(--text-codeInline-size) var(--fontStack-monospace); /** Inline code blocks using em units to inherit size from its parent. */
+  --text-display-shorthand: var(--text-display-weight) var(--text-display-size) / var(--text-display-lineHeight) var(--fontStack-sansSerifDisplay); /** Hero-style text for brand to product transition pages. Utilize Title (large) styles on narrow viewports. */
+  --text-subtitle-shorthand: var(--text-subtitle-weight) var(--text-subtitle-size) / var(--text-subtitle-lineHeight) var(--fontStack-sansSerifDisplay); /** Page sections/sub headings, or less important object names in page titles (automated action titles, for example). Same line-height as title (medium). */
+  --text-title-shorthand-large: var(--text-title-weight-large) var(--text-title-size-large) / var(--text-title-lineHeight-large) var(--fontStack-sansSerifDisplay); /** Page headings for user-created objects, such as issues or pull requests. Utilize title (medium) styles on narrow viewports. */
+  --text-title-shorthand-medium: var(--text-title-weight-medium) var(--text-title-size-medium) / var(--text-title-lineHeight-medium) var(--fontStack-sansSerifDisplay); /** Default page title. The 32px-equivalent line-height matches with button and other medium control heights. Great for page header composition. */
+  --text-title-shorthand-small: var(--text-title-weight-small) var(--text-title-size-small) / var(--text-title-lineHeight-small) var(--fontStack-sansSerif); /** Uses the same size as body (large) with a heavier weight of semibold (600). */
 }
