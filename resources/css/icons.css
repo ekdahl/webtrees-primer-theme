@@ -242,14 +242,6 @@
     content: '\f06a';
 }
 
-/* wt-block-content-gedcom_block/wt-block-content-user_welcome */
-
-.wt-block-content-gedcom_block [class^="wt-icon-"],
-.wt-block-content-user_welcome [class^="wt-icon-"] {
-    color: var(--fgColor-muted);
-    font-size: var(--base-size-24);
-}
-
 /* Map links */
 
 .wt-icon-bing-maps {
